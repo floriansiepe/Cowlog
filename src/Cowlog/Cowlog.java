@@ -16,6 +16,9 @@ public class Cowlog {
     }
 
     private ArrayList<String> makeHeader(String msg) {
+        // Creates the message header
+
+        // Split words in muliple line if needed
         ArrayList<String> words = new ArrayList<>(Arrays.asList(msg.split(" ")));
         ArrayList<String> lines = new ArrayList<>();
         String string = "";
@@ -48,6 +51,7 @@ public class Cowlog {
     }
 
     public static void main(String[] args) {
+        // Test case
         Cowlog cowlog = new Cowlog();
         for (String entry : cowlog.makeHeader("Ich bin deine Fehlermeldung - Muuuuuhaha")){
             System.out.println(entry);

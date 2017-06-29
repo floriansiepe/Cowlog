@@ -21,6 +21,7 @@ public class FigureReader {
     }
 
     private void addFigures(){
+        // Add all figures in figures directory as Figures(Class) to the ArrayList figures
         ArrayList<File> textFiles = this.finder(this.DIR);
         for (File textFile : textFiles) {
             Scanner s;
@@ -45,9 +46,8 @@ public class FigureReader {
     }
 
     private ArrayList<File> finder( String dirName){
+        // Reads all txt in figures directory
         ArrayList<File> results = new ArrayList<File>();
-
-
         File[] files = new File(this.DIR).listFiles();
         //If this pathname does not denote a directory, then listFiles() returns null.
         for (File file : files) {
